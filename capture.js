@@ -13,9 +13,7 @@ casper.start(url);
 casper.waitForSelector(selector,
   function() {
     this.viewport(width, height);
-    this.wait(3000, function() {
-      this.capture(filename);
-    });
+    this.capture(filename);
   },
   function() {
     this.viewport(width, height);
