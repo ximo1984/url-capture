@@ -14,7 +14,7 @@ options = {
   width: 600,
   height: 400,
   wait: 3000,
-  selector: body.class
+  selector: ‘body.class’
 }
 try {
   capture(url, file, options, function() {
@@ -36,5 +36,5 @@ You will need to have CasperJs installed globally:
 
 ## License
 
-GPL2
+GPLv3
 
