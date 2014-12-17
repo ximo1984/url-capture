@@ -3,7 +3,8 @@ var exec = require('child_process').exec;
 var defaultOptions = {
     width: 340,
     height: 195,
-    selector: 'body'
+    selector: 'body',
+    wait: 3000,
 };
 
 var capture = function(url, destination, options, callback) {
@@ -13,6 +14,21 @@ var capture = function(url, destination, options, callback) {
   }
 
   url = url.replace(/ /g, '%20');
+  if (!options.hasOwnProperty('wait')) {
+    options.wait = defaultOptions.wait;
+  }
+
+  if (!options.hasOwnProperty('width')) {
+    options.width= defaultOptions.width;
+  }
+
+  if (!options.hasOwnProperty('height')) {
+    options.height = defaultOptions.height;
+  }
+
+  if (!options.hasOwnProperty('selector')) {
+    options.selector = defaultOptions.selector;
+  }
 
   args = [
     '--destination=' + destination,

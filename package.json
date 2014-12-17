@@ -1,10 +1,25 @@
 {
-  "name": "capture",
-  "main": "./index.js",
+  "name": "url-capture",
   "description": "Takes screenshots of the given URL.",
   "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "spooky": "0.2.5"
-  }
+  "main": "./index.js",
+  "keywords": [
+    "casperjs",
+    "screenshots"
+  ],
+  "bugs": {
+    "url": "https://github.com/ximo1984/url-capture/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ximo1984/url-capture.git"
+  },
+  "author": "ximo1984",
+  "contributors": {
+    "ximo1984",
+    "DavidHernandez"
+  },
+  "licenses": [
+    "type": "GPLv3"
+  ]
 }
