@@ -8,12 +8,16 @@ var height = casper.cli.get('height');
 
 var selector = casper.cli.get('selector');
 
+var waitTime = casper.cli.get('wait');
+
 casper.start(url);
 
 casper.waitForSelector(selector,
   function() {
     this.viewport(width, height);
-    this.capture(filename);
+    this.wait(waitTime, function() {
+      this.capture(filename);
+    });
   },
   function() {
     this.viewport(width, height);
