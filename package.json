@@ -1,0 +1,10 @@
+{
+  "name": "capture",
+  "main": "./index.js",
+  "description": "Takes screenshots of the given URL.",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "spooky": "0.2.5"
+  }
+}
