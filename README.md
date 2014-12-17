@@ -6,15 +6,15 @@ Takes a screenshot of the given URL. Supports image resizing and can wait until 
 ## Examples
 
 ```javascript
-var capture = require(‘url-capture’);
+var capture = require('url-capture');
 
-url = ‘http://google.com’;
-file = ‘google.png’;
+url = 'http://google.com';
+file = 'google.png';
 options = {
   width: 600,
   height: 400,
-  wait: 3000,
-  selector: ‘body.class’
+  wait: 3000, // miliseconds
+  selector: 'body' // CSS selector
 }
 try {
   capture(url, file, options, function() {
