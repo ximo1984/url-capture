@@ -1,7 +1,7 @@
 {
   "name": "url-capture",
   "description": "Takes screenshots of the given URL.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./index.js",
   "keywords": [
     "casperjs",
