@@ -1,4 +1,5 @@
 var casper = require('casper').create();
+var mouse = require('mouse').create(casper);
 
 var url = casper.cli.get('url');
 var filename = casper.cli.get('destination');
@@ -16,11 +17,13 @@ casper.waitForSelector(selector,
   function() {
     this.viewport(width, height);
     this.wait(waitTime, function() {
+      this.mouse.move(-10, -10);
       this.capture(filename);
     });
   },
   function() {
     this.viewport(width, height);
+    this.mouse.move(-10, -10);
     this.capture(filename);
   },
   10000
